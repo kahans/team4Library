@@ -57,15 +57,16 @@ body {
 					<span class="icon-bar"></span> <span class="icon-bar"></span> <span
 						class="icon-bar"></span>
 				</button>
-				<a class="brand" href="#">team4 도서관</a>
+				<a class="brand" href="../view/mainHome.html">team4 도서관</a>
 				<div class="nav-collapse collapse">
 					<p class="navbar-text pull-right">
+						<!-- 로그인과 로그아웃을 if문으로 설정하기 -->
 						<a href="../view/loginform.html" class="navbar-link">로그인</a>
 					</p>
 					<ul class="nav">
-						<li class="active"><a href="#">대문</a></li>
-						<li><a href="#about">소개</a></li>
-						<li><a href="#contact">연락처</a></li>
+						<li><a href="../view/bookRegister.html">도서관리</a></li>
+						<li><a href="../view/memberJoin.html">회원관리</a></li>
+						<li class="active"><a href="../view/bookRent.html">대여관리</a></li>
 					</ul>
 				</div>
 				<!--/.nav-collapse -->
@@ -78,22 +79,9 @@ body {
 			<div class="span3">
 				<div class="well sidebar-nav">
 					<ul class="nav nav-list">
-						<li class="nav-header">사이드바</li>
-						<li class="active"><a href="#">Link</a></li>
-						<li><a href="#">링크</a></li>
-						<li><a href="#">링크</a></li>
-						<li><a href="#">링크</a></li>
-						<li class="nav-header">사이드바</li>
-						<li><a href="#">링크</a></li>
-						<li><a href="#">링크</a></li>
-						<li><a href="#">링크</a></li>
-						<li><a href="#">링크</a></li>
-						<li><a href="#">링크</a></li>
-						<li><a href="#">링크</a></li>
-						<li class="nav-header">사이드바</li>
-						<li><a href="#">링크</a></li>
-						<li><a href="#">링크</a></li>
-						<li><a href="#">링크</a></li>
+						<li class="nav-header">대여관리</li>
+						<li class="active"><a href="../view/bookRent.html">도서대여</a></li>
+						<li><a href="../view/bookReturn.html">도서반납</a></li>
 					</ul>
 				</div>
 				<!--/.well -->
@@ -101,46 +89,32 @@ body {
 			<!--/span-->
 			<div class="span8">
 				<div class="hero-unit">
-					<h1 align="center">회원가입</h1>
+					<h1 align="center">대여</h1>
 				</div>
 				<div class="row-fluid">
 					<div class="span4">
-						<!-- 회원가입 폼 -->
-						<form >
-							<table>
-								<tr>
-									<th>회원정보입력</th>
-								</tr>					
-								<tr>
-									<th>ID</th>
-									<td><input type="text" name="id"></td>								
-								</tr>
-								<tr>
-									<th>이름</th>
-									<td><input type="text" name="name"></td>								
-								</tr>
-								<tr>
-									<th>연락처</th>
-									<td><input type="text" name="hp"></td>								
-								</tr>
-								<tr>
-									<th>등급</th>
-									<td>
-										<select>
-											<option>::등급선택::</option>
-											<option>일반</option>
-											<option>유료</option>
-										</select>
-									</td>								
-								</tr>
-							</table>
-							<p>
-								<a href="#" class="btn btn-primary btn-large">가입하기</a>
-								<input type="reset" class="btn btn-primary btn-large" value="리셋"/>
-							</p>
-							
+						<!-- 대여 폼 -->
+						<form action="#" method="post">
+							<div>
+								도서코드: <input type="text" name="bookCode" />
+							</div>
+							<div>
+								회원코드: <input type="text" name="memberId" />
+							</div>
+							<div>
+								대여일: <input type="date" name="startDate" />
+							</div>
+							<div>
+								종료일: <input type="date" name="endDate" />
+							</div>
+							<div>
+								결제금액: <input type="text" name="rentalPay" />
+							</div>
+							<!-- <input type="submit" value="대여" />
+							<input type="reset"	value="초기화" /> -->
 						</form>
-						
+						<input type="submit" class="btn btn-primary btn-large" value="대여" />
+						<input type="reset" class="btn btn-primary btn-large" value="리셋" />
 					</div>
 					<!--/span-->
 

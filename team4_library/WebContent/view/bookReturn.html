@@ -57,15 +57,16 @@ body {
 					<span class="icon-bar"></span> <span class="icon-bar"></span> <span
 						class="icon-bar"></span>
 				</button>
-				<a class="brand" href="#">team4 도서관</a>
+				<a class="brand" href="../view/mainHome.html">team4 도서관</a>
 				<div class="nav-collapse collapse">
 					<p class="navbar-text pull-right">
+						<!-- 로그인과 로그아웃을 if문으로 설정하기 -->
 						<a href="../view/loginform.html" class="navbar-link">로그인</a>
 					</p>
 					<ul class="nav">
-						<li class="active"><a href="#">대문</a></li>
-						<li><a href="#about">소개</a></li>
-						<li><a href="#contact">연락처</a></li>
+						<li><a href="../view/">도서관리</a></li>
+						<li><a href="../view/memberJoin.html">회원관리</a></li>
+						<li class="active"><a href="../view/rentBook.html">대여관리</a></li>
 					</ul>
 				</div>
 				<!--/.nav-collapse -->
@@ -78,22 +79,10 @@ body {
 			<div class="span3">
 				<div class="well sidebar-nav">
 					<ul class="nav nav-list">
-						<li class="nav-header">사이드바</li>
-						<li class="active"><a href="#">Link</a></li>
-						<li><a href="#">링크</a></li>
-						<li><a href="#">링크</a></li>
-						<li><a href="#">링크</a></li>
-						<li class="nav-header">사이드바</li>
-						<li><a href="#">링크</a></li>
-						<li><a href="#">링크</a></li>
-						<li><a href="#">링크</a></li>
-						<li><a href="#">링크</a></li>
-						<li><a href="#">링크</a></li>
-						<li><a href="#">링크</a></li>
-						<li class="nav-header">사이드바</li>
-						<li><a href="#">링크</a></li>
-						<li><a href="#">링크</a></li>
-						<li><a href="#">링크</a></li>
+						<li class="nav-header">대여관리</li>
+						<!-- 마우스오버를 사용하여 액션 넣기 -->
+						<li><a href="../view/bookRent.html">도서대여</a></li>
+						<li class="active"><a href="../view/bookReturn.html">도서반납</a></li>
 					</ul>
 				</div>
 				<!--/.well -->
@@ -101,16 +90,14 @@ body {
 			<!--/span-->
 			<div class="span8">
 				<div class="hero-unit">
-					<h1 align="center">회원가입</h1>
+					<h1 align="center">반납</h1>
 				</div>
 				<div class="row-fluid">
 					<div class="span4">
-						<!-- 회원가입 폼 -->
+						<!-- 반납 폼 -->
 						<form action="#" method="post">
 							<div>
 								도서코드: <input type="text" name="bookCode" />
-							</div>
-							<div>
 								<button id="btn" type="button">조회</button>
 							</div>
 							<div>
@@ -128,10 +115,11 @@ body {
 							<div>
 								받을금액: <input type="text" name="pay" />
 							</div>
-							<input type="submit" value="반납" /> <input type="reset"
-								value="초기화" />
+							<!-- <input type="submit" value="반납" />
+							<input type="reset"	value="초기화" /> -->
 						</form>
-
+						<input type="submit" class="btn btn-primary btn-large" value="반납" />
+						<input type="reset" class="btn btn-primary btn-large" value="리셋" />
 					</div>
 					<!--/span-->
 
